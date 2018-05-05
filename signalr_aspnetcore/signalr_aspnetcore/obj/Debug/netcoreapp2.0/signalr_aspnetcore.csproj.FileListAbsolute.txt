@@ -9,3 +9,14 @@ C:\Users\mcmomot96\source\repos\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\
 C:\Users\mcmomot96\source\repos\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.AssemblyInfo.cs
 C:\Users\mcmomot96\source\repos\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.dll
 C:\Users\mcmomot96\source\repos\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.pdb
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\bin\Debug\netcoreapp2.0\signalr_aspnetcore.deps.json
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\bin\Debug\netcoreapp2.0\signalr_aspnetcore.runtimeconfig.json
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\bin\Debug\netcoreapp2.0\signalr_aspnetcore.runtimeconfig.dev.json
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\bin\Debug\netcoreapp2.0\signalr_aspnetcore.dll
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\bin\Debug\netcoreapp2.0\signalr_aspnetcore.pdb
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.csprojResolveAssemblyReference.cache
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.csproj.CoreCompileInputs.cache
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.AssemblyInfoInputs.cache
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.AssemblyInfo.cs
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.dll
+C:\Users\mcmomot96\Desktop\Parallel-programming\signalr_aspnetcore\signalr_aspnetcore\obj\Debug\netcoreapp2.0\signalr_aspnetcore.pdb

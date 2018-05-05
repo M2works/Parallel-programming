@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,9 +26,7 @@ namespace signalr_aspnetcore
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseFileServer();
-
             app.UseSignalR(routes =>
             {
                 routes.MapHub<ChatHub>("chat");

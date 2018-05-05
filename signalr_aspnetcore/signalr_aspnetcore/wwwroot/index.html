@@ -7,8 +7,15 @@
 
 <body>
     <div class="container">
-        <input type="text" id="message" />
-        <input type="button" id="sendMessage" value="Send" />
+        <ul>
+            <li><input type="text" id="message" /></li>
+            <li><input type="button" id="sendMessage" value="Send" /></li>
+            <li><label title="Insert name"/></li>
+            <li><input type="text" id="namePrivate" /></li>
+            <li><label title="Insert message" /></li>
+            <li><input type="text" id="messagePrivate" /></li>
+            <li><input type="button" id="sendPrivateMessage" value="Send" /></li>
+        </ul>
         <ul id="discussion"></ul>
     </div>
     <script type="text/javascript" src="signalr-client-1.0.0-alpha2-final.js"></script>
@@ -16,19 +23,50 @@
     <script type="text/javascript">
         var transport = signalR.TransportType.WebSockets;
         var connection = new signalR.HubConnection(`http://${document.location.host}/chat`, { transport: transport });
-        var messageInput = document.getElementById('message');
-        var name = prompt('Enter your name:', '');
+        
+        var name;
+
         var button = document.getElementById("sendMessage");
+        var messageInput = document.getElementById('message');
+
+        var buttonPrivate = document.getElementById("sendPrivateMessage");
+        var messagePrivateInput = document.getElementById('messagePrivate');
+        var receiverNameInput = document.getElementById('namePrivate');
+
+        var connectedUsers = [];
+
         connection.on('broadcastMessage', (name, message) => {
             var liElement = document.createElement('li');
             liElement.innerHTML = '<strong>' + name + '</strong>:&nbsp;&nbsp;' + message;
             document.getElementById('discussion').appendChild(liElement);
         });
+
+        connection.on('privateMessage', (name, message) => {
+            var liElement = document.createElement('li');
+            liElement.innerHTML = '<strong>' + name + '</strong>:&nbsp;&nbsp;' + message;
+            document.getElementById('discussion').appendChild(liElement);
+        });
+
+        connection.on('assignName', (myName) => {
+            name = myName;
+        });
+
         button.addEventListener("click", event => {
             connection.invoke('send', name, messageInput.value);
             messageInput.value = '';
+            messagePrivateInput.value = '';
+            receiverNameInput.value = '';
             messageInput.focus();
         });
+
+        buttonPrivate.addEventListener("click", event => {
+            connection.invoke('private', name, messagePrivateInput.value, receiverNameInput.value);
+            messagePrivateInput.value = '';
+            receiverNameInput.value = '';
+            messageInput.value = '';
+            messageInput.focus();
+        });
+
         connection.start();
     </script>
 </body>
