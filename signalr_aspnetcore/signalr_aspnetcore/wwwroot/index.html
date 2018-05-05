@@ -25,6 +25,9 @@
         var connection = new signalR.HubConnection(`http://${document.location.host}/chat`, { transport: transport });
         
         var name;
+        var coordinates = [];
+
+        var agentsCoordinates = [];
 
         var button = document.getElementById("sendMessage");
         var messageInput = document.getElementById('message');
@@ -41,14 +44,32 @@
             document.getElementById('discussion').appendChild(liElement);
         });
 
+        connection.on('startSimulation', () => {
+            var liElement = document.createElement('li');
+            liElement.innerHTML = 'All agents connected. Simulation starting.';
+            document.getElementById('discussion').appendChild(liElement);
+        });
+
+        connection.on('sendAgentsData', (name, xCoo, yCoo) => {
+            var liElement = document.createElement('li');
+            agentsCoordinates.push({Name : name, X : xCoo, Y : yCoo})
+            liElement.innerHTML = 'Agent: ' + name + ', ' + 'coordinates: {' + xCoo + ',' + yCoo + '} connected.';
+            document.getElementById('discussion').appendChild(liElement);
+        });
+
         connection.on('privateMessage', (name, message) => {
             var liElement = document.createElement('li');
             liElement.innerHTML = '<strong>' + name + '</strong>:&nbsp;&nbsp;' + message;
             document.getElementById('discussion').appendChild(liElement);
         });
 
-        connection.on('assignName', (myName) => {
+        connection.on('assignName', (myName, myCoordinateX, myCoordinateY) => {
             name = myName;
+            coordinates.push(myCoordinateX);
+            coordinates.push(myCoordinateY);
+            var liElement = document.createElement('li');
+            liElement.innerHTML = '<strong> My coordinates: </strong>:&nbsp;&nbsp;' + coordinates[0] + ' ' + coordinates[1];
+            document.getElementById('discussion').appendChild(liElement);
         });
 
         button.addEventListener("click", event => {

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "20b676fe24e6187018d1972d15eded488e24acc0"
+    "signature": "d2a86f0d311e903c4f4bbdf764c58bf43341fd9d"
   },
   "compilationOptions": {
     "defines": [
@@ -27,6 +27,7 @@
           "Microsoft.AspNetCore.SignalR": "1.0.0-alpha2-final",
           "Microsoft.AspNetCore.SignalR.Client": "1.0.0-alpha2-final",
           "Microsoft.NETCore.App": "2.0.0",
+          "SignalR.EventAggregatorProxy.Client.DotNet": "1.5.158",
           "System.Reactive.Linq": "3.1.1"
         },
         "runtime": {
@@ -121,6 +122,14 @@
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
+        }
+      },
+      "Microsoft.AspNet.SignalR.Client/2.2.0": {
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.SignalR.Client.dll": {}
+        },
+        "compile": {
+          "lib/net45/Microsoft.AspNet.SignalR.Client.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.0.2": {
@@ -2734,6 +2743,18 @@
           }
         }
       },
+      "SignalR.EventAggregatorProxy.Client.DotNet/1.5.158": {
+        "dependencies": {
+          "Microsoft.AspNet.SignalR.Client": "2.2.0",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "runtime": {
+          "lib/net40/SignalR.EventAggregatorProxy.Client.dll": {}
+        },
+        "compile": {
+          "lib/net40/SignalR.EventAggregatorProxy.Client.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.7": {
         "dependencies": {
           "SQLitePCLRaw.core": "1.1.7",
@@ -4352,6 +4373,13 @@
       "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
       "hashPath": "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512"
     },
+    "Microsoft.AspNet.SignalR.Client/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BfYVXRqwJCg7UNAIz6wd+wlGmQlmmPFt42v1icF52b1xuqQeGEXSNFtl5xqJdwyd45xnc64pM3MzCV5WQ8mIKg==",
+      "path": "microsoft.aspnet.signalr.client/2.2.0",
+      "hashPath": "microsoft.aspnet.signalr.client.2.2.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore/2.0.2": {
       "type": "package",
       "serviceable": true,
@@ -5702,6 +5730,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SignalR.EventAggregatorProxy.Client.DotNet/1.5.158": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L4oKwtGlFcCL5UgAjriZ7Uo0gc3pg2e0+WENqEhmKF0V98iTyznhWK0tWs854PAQBXPVgalXEMyiNuMcMc8Xgw==",
+      "path": "signalr.eventaggregatorproxy.client.dotnet/1.5.158",
+      "hashPath": "signalr.eventaggregatorproxy.client.dotnet.1.5.158.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_green/1.1.7": {
       "type": "package",

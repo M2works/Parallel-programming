@@ -93,6 +93,15 @@
           "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
         }
       },
+      "Microsoft.AspNet.SignalR.Client/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.AspNet.SignalR.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.SignalR.Client.dll": {}
+        }
+      },
       "Microsoft.AspNetCore/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -3170,6 +3179,19 @@
           }
         }
       },
+      "SignalR.EventAggregatorProxy.Client.DotNet/1.5.158": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.SignalR.Client": "2.2.0",
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "compile": {
+          "lib/net40/SignalR.EventAggregatorProxy.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net40/SignalR.EventAggregatorProxy.Client.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.7": {
         "type": "package",
         "dependencies": {
@@ -5195,6 +5217,25 @@
         "lib/netstandard1.6/Microsoft.AI.DependencyCollector.xml",
         "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512",
         "microsoft.applicationinsights.dependencycollector.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.SignalR.Client/2.2.0": {
+      "sha512": "BfYVXRqwJCg7UNAIz6wd+wlGmQlmmPFt42v1icF52b1xuqQeGEXSNFtl5xqJdwyd45xnc64pM3MzCV5WQ8mIKg==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr.client/2.2.0",
+      "files": [
+        "lib/net40/Microsoft.AspNet.SignalR.Client.XML",
+        "lib/net40/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.XML",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/portable-net45+sl5+netcore45+wp8+wp81/Microsoft.AspNet.SignalR.Client.XML",
+        "lib/portable-net45+sl5+netcore45+wp8+wp81/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/portable-win81+wpa81/Microsoft.AspNet.SignalR.Client.Store.Xml",
+        "lib/portable-win81+wpa81/Microsoft.AspNet.SignalR.Client.Store.dll",
+        "lib/portable-win81+wpa81/Microsoft.AspNet.SignalR.Client.XML",
+        "lib/portable-win81+wpa81/Microsoft.AspNet.SignalR.Client.dll",
+        "microsoft.aspnet.signalr.client.2.2.0.nupkg.sha512",
+        "microsoft.aspnet.signalr.client.nuspec"
       ]
     },
     "Microsoft.AspNetCore/2.0.2": {
@@ -8351,6 +8392,17 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SignalR.EventAggregatorProxy.Client.DotNet/1.5.158": {
+      "sha512": "L4oKwtGlFcCL5UgAjriZ7Uo0gc3pg2e0+WENqEhmKF0V98iTyznhWK0tWs854PAQBXPVgalXEMyiNuMcMc8Xgw==",
+      "type": "package",
+      "path": "signalr.eventaggregatorproxy.client.dotnet/1.5.158",
+      "files": [
+        "lib/net40/SignalR.EventAggregatorProxy.Client.dll",
+        "readme.txt",
+        "signalr.eventaggregatorproxy.client.dotnet.1.5.158.nupkg.sha512",
+        "signalr.eventaggregatorproxy.client.dotnet.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_green/1.1.7": {
@@ -13288,6 +13340,7 @@
       "Microsoft.AspNetCore.SignalR >= 1.0.0-alpha2-final",
       "Microsoft.AspNetCore.SignalR.Client >= 1.0.0-alpha2-final",
       "Microsoft.NETCore.App >= 2.0.0",
+      "SignalR.EventAggregatorProxy.Client.DotNet >= 1.5.158",
       "System.Reactive.Linq >= 3.1.1"
     ]
   },
@@ -13349,6 +13402,10 @@
             "version": "[2.0.0, )",
             "autoReferenced": true
           },
+          "SignalR.EventAggregatorProxy.Client.DotNet": {
+            "target": "Package",
+            "version": "[1.5.158, )"
+          },
           "System.Reactive.Linq": {
             "target": "Package",
             "version": "[3.1.1, )"
@@ -13361,5 +13418,27 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „Microsoft.AspNet.SignalR.Client 2.2.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1” zamiast platformy docelowej projektu „.NETCoreApp,Version=v2.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "Microsoft.AspNet.SignalR.Client",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „SignalR.EventAggregatorProxy.Client.DotNet 1.5.158” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1” zamiast platformy docelowej projektu „.NETCoreApp,Version=v2.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "SignalR.EventAggregatorProxy.Client.DotNet",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
